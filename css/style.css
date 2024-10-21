@@ -1,0 +1,249 @@
+/* Reset de CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* colores 
+#2a272a;
+#4b4a54;
+#677381;
+#82a0aa;
+
+*/
+
+html{
+    /* hace que un rem deje de valer 16px y pasa a 10
+    1rem = 10px */
+    font-size: 62.5%;
+}
+
+/* HEADER */
+/* header {
+    
+} */
+
+/* MENU NAVEGACION */
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de las listas */
+    display: flex; /* Hace que los elementos de la lista estén en línea horizontal */
+    justify-content: center; /* Centra los elementos de la lista en el medio */
+    padding: 60px 20px; 
+    
+}
+
+/* elementos de la lista - espacio entre los elementos del menú */
+nav ul li {
+    margin: 0 30px; 
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+    color: #0f0f0f; 
+    font-size: 2rem; 
+    padding: 10px 15px; 
+
+}
+
+/* Efecto cambio color al pasar el ratón sobre los links */
+nav ul li a:hover {
+    background-color: #82a0aa; /* Cambia el fondo al pasar el ratón sobre los enlaces */
+    color: white; 
+    border-radius: 5px;
+    
+    
+}
+
+/* CIERRE STYLES MENU NAVEGACION */
+
+
+
+/* CIERRE STYLES FOOTER */
+
+h1{
+    /* text-decoration: underline; */
+    color: rgb(25, 25, 25);
+    text-align: center;
+    text-shadow: 4px 2px 5px rgba(0,0,0,0.15);
+}
+
+body{
+    background-color: #f0f0f0f0;
+
+}
+
+/* Especifidad */
+
+div h2 {
+    color:#2a272a;
+    font-size: 1.7rem;
+    padding: 10px 0px;
+}
+
+div p {
+    color: #2a272a;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+}
+
+/* MAIN INDEX */
+
+.banner h1 {
+    font-size: 2.5rem;
+    color: rgb(25, 25, 25);
+    /* color: white; */
+    text-align: center;
+    text-shadow: 4px 2px 5px rgba(0,0,0,0.15);
+    padding-top: 20px;
+    
+}
+
+/* SECCION PRINCIPAL */
+
+.services{
+    display: flex; /* activa flexbox */
+    justify-content: space-around;
+    margin: 50px;
+    align-items: flex-start;
+    /* text-align: center; */
+    
+}
+
+.service{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Opcional: para agregar un pequeño borde */
+    border-radius: 8px; /* borde redondeado */
+    transition: transform 0.3s ease; /* animación de transformación suave */
+}
+
+.service:hover {
+    transform: scale(1.05); /* escala el elemento al pasar el ratón */
+}
+
+
+/* FORMULARIO PAG CONTACTO*/
+
+form {
+    background-color: white;
+    width: 400px; /* Ancho del form */
+    margin: 0 auto; /* centra el form */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+    border-radius: 8px; /* borde redondeado */
+    font-family: "Open Sans", sans-serif;
+}
+
+/* FOOTER - PIE DE PAG */
+
+footer{
+    background-color: #677381;
+    height: 80px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   /* position: fixed;   fija el footer / no ponerlo xq se superpone al contenido */
+    /* bottom: 0; lo lleva al fondo */
+    width: 100%; /* que ocupe el ancho de la página */
+    
+}
+
+/* testimonio  pruebas*/
+
+/* .caja{
+    width: 50%;
+    height: 50vh;
+    background-color: lightblue;
+    color: white;
+    border: 2px solid blueviolet;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+    flex-grow: 1;
+} */
+
+/* .contenedor{ 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+} */
+
+
+
+/* Sección "Sobre mí" */
+
+/* .sobre-mi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .sobre-mi p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .sobre-mi ul {
+    list-style: none;
+    padding-left: 20px;
+    font-size:1.6rem;
+  } */
+
+  .contenedor-grid{
+    width: 100%;
+    height: 100%;
+  }
+
+  .contenedor-grid{
+    display: grid;
+    grid-template-areas: 
+    "h1      h1      h1"
+    "foto1 texto1 texto1"
+    "foto1 texto2 texto2"
+    "texto3 texto4 text4";
+    grid-template-rows: 100 repeat(3, 150px);
+    grid-template-columns: 40% 25% 25%;
+    gap: 2px 2px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .titulo-1{
+    grid-area: h1;
+  }
+
+  .feed {
+    grid-area: foto1;
+  }
+
+  .texto-1 {
+    grid-area: texto1;
+    margin-left: 20px;
+  }
+
+  .texto-2 {
+    grid-area: texto2;
+  }
+
+  .texto-3 {
+    grid-area: texto3;
+  }
+
+  .texto-4 {
+    grid-area: texto4;
+    margin-left: 20px;
+  }
