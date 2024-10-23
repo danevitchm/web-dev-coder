@@ -12,7 +12,6 @@
 #4b4a54;
 #677381;
 #82a0aa;
-
 */
 
 html{
@@ -20,11 +19,6 @@ html{
     1rem = 10px */
     font-size: 62.5%;
 }
-
-/* HEADER */
-/* header {
-    
-} */
 
 /* MENU NAVEGACION */
 
@@ -63,8 +57,6 @@ nav ul li a:hover {
 
 
 
-/* CIERRE STYLES FOOTER */
-
 h1{
     /* text-decoration: underline; */
     color: rgb(25, 25, 25);
@@ -74,7 +66,21 @@ h1{
 
 body{
     background-color: #f0f0f0f0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    min-height: 100vh;
+}
 
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
 }
 
 /* Especifidad */
@@ -103,7 +109,7 @@ div p {
     
 }
 
-/* SECCION PRINCIPAL */
+/* SECCION PRINCIPAL HOME*/
 
 .services{
     display: flex; /* activa flexbox */
@@ -127,6 +133,34 @@ div p {
     transform: scale(1.05); /* escala el elemento al pasar el ratón */
 }
 
+/* CTA */
+
+.cta {
+  text-align: center;
+  margin: 50px 0; /* espacio alrededor de la sección */
+  padding: 20px;
+}
+
+.button-cta {
+  display: inline-block; /* se comporta como un botón */
+  margin-top: 30px;
+  padding: 15px 30px; 
+  background-color: #677381; 
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 50px;
+  text-decoration: none; /* subr del enlace */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* animation */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Efectos de hover y focus */
+.button-cta:hover,
+.button-cta:focus {
+  background-color: #2a272a; /* cambia color fondo al pasar el clic */
+  transform: scale(1.05); /* animation */
+}
 
 /* FORMULARIO PAG CONTACTO*/
 
@@ -143,6 +177,7 @@ form {
 /* FOOTER - PIE DE PAG */
 
 footer{
+    grid-area: footer;
     background-color: #677381;
     height: 80px;
     color: white;
@@ -151,99 +186,143 @@ footer{
     justify-content: center;
     align-items: center;
     display: flex;
-   /* position: fixed;   fija el footer / no ponerlo xq se superpone al contenido */
-    /* bottom: 0; lo lleva al fondo */
     width: 100%; /* que ocupe el ancho de la página */
+    padding: 20px;
     
+  /* CIERRE STYLES FOOTER */
+
 }
 
-/* testimonio  pruebas*/
+/* seccion historia */
 
-/* .caja{
-    width: 50%;
-    height: 50vh;
-    background-color: lightblue;
-    color: white;
-    border: 2px solid blueviolet;
-    text-align: center;
-    line-height: 100px;
-    margin: 10px;
-    flex-grow: 1;
-} */
+  /* Estilos de la sección de historia */
+.historia {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #677381;
+}
 
-/* .contenedor{ 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.contenedor-historia {
+  display: flex;
+  flex-direction: row; /* La imagen y el texto estarán en una fila en pantallas grandes */
+  align-items: flex-start;
+  max-width: 1200px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.historia-foto img {
+  max-width: 300px; /* Tamaño de la imagen */
+  border-radius: 50%; /* Imagen redonda */
+  margin-right: 40px; /* Separación entre la imagen y el texto */
+}
+
+.historia-content h1 {
+  font-size: 2.8rem;
+  color: #4b4a54;
+  margin-bottom: 20px;
+}
+
+.historia-content p, .historia-content ul {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;}
+
+/* historia responsive */
+@media (max-width: 768px) {
+  .contenedor-historia {
+      flex-direction: column; /* En pantallas pequeñas, la imagen y el texto se apilan */
+      text-align: center;
+  }
+
+  .historia-foto img {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .historia-content {
+      text-align: left;
+  }
+}
+
+  /* MEDIA QUERIES */ 
+
+/* nav */
+
+@media (max-width: 600px) {
+  nav ul {
     flex-direction: column;
-} */
-
-
-
-/* Sección "Sobre mí" */
-
-/* .sobre-mi {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-  }
-  
-  .sobre-mi p {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-align: justify;
-  }
-  
-  .sobre-mi ul {
-    list-style: none;
-    padding-left: 20px;
-    font-size:1.6rem;
-  } */
-
-  .contenedor-grid{
-    width: 100%;
-    height: 100%;
+    align-items: center; 
+    padding: 20px 0; /
   }
 
-  .contenedor-grid{
-    display: grid;
-    grid-template-areas: 
-    "h1      h1      h1"
-    "foto1 texto1 texto1"
-    "foto1 texto2 texto2"
-    "texto3 texto4 text4";
-    grid-template-rows: 100 repeat(3, 150px);
-    grid-template-columns: 40% 25% 25%;
-    gap: 2px 2px;
-    justify-content: center;
-    justify-items: center;
+  nav ul li {
+    margin: 10px 0; 
+  }
+
+  nav ul li a {
+    font-size: 1.6rem; 
+  }
+}
+
+
+/* services mobile */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column; /* Apila vertical */
     align-items: center;
-    margin-bottom: 50px;
+    margin: 20px 0;
   }
 
-  .titulo-1{
-    grid-area: h1;
+  .service {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+}
+
+
+  /* CTA mobile */
+
+@media (max-width: 600px) {
+  .cta h2 {
+    font-size: 2rem; 
+    padding: 0 20px; 
   }
 
-  .feed {
-    grid-area: foto1;
+  .button-cta {
+    font-size: 1.4rem; 
+    padding: 12px 25px;
+  }
+}
+
+/* pantalla mediana */
+@media (min-width: 601px) and (max-width: 900px) {
+  .cta h2 {
+    font-size: 2.4rem;
   }
 
-  .texto-1 {
-    grid-area: texto1;
-    margin-left: 20px;
+  .button-cta {
+    font-size: 1.5rem;
+    padding: 14px 28px; 
+  }
+}
+
+/* desktop */
+@media (min-width: 901px) {
+  .cta h2 {
+    font-size: 2.8rem; 
   }
 
-  .texto-2 {
-    grid-area: texto2;
+  .button-cta {
+    font-size: 1.6rem;
+    padding: 15px 30px; 
   }
-
-  .texto-3 {
-    grid-area: texto3;
-  }
-
-  .texto-4 {
-    grid-area: texto4;
-    margin-left: 20px;
-  }
+}
