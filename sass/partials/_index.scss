@@ -1,0 +1,59 @@
+/* SECCIÓN PRINCIPAL HOME "main-section" */
+/* Estilo general de la sección main */
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    background-color: #f0f0f0;
+    
+    content { /* Contenido de texto a la izquierda */
+        max-width: 50%;
+        text-align: left;
+      }
+    sub {
+        color: #677381; 
+        font-weight: bold;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+      }
+    h1 { /* Estilo de encabezado principal */
+        font-size: 2.5em;
+        line-height: 1.2;
+        margin: 10px 0;
+        color: #2a272a;
+      }
+    p {
+        font-size: 1em;
+        margin: 20px 0;
+        color: #2a272a;
+      }
+    .image-section { /* Sección de imágenes a la derecha */
+        display: flex;
+        gap: 20px; /* Espacio entre tarjetas */
+      }
+    .image-card { /* Tarjetas de imagen */
+        position: relative;
+        border-radius: 15px;
+        width: 250px;
+        height: 350px;
+      }
+      .card1 {
+        background-image: url('../img/workin2.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 250px;
+        height: 350px;
+        border-radius: 15px;
+      }
+      .card2 {
+        background-image: url('../img/personal-image.png');
+        background-size: cover;
+        background-position: center;
+        width: 250px;
+        height: 350px;
+        border-radius: 15px;
+      }
+  }
+  /* CIERRE "main-section" */
