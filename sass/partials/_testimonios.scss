@@ -1,0 +1,63 @@
+
+/* SECCIÓN PRINCIPAL TESTIMONIOS "testimonios" */
+/* Estilo general de la sección testimonios */
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #677381;
+    padding: 50px 100px;
+  
+    /* CONTENEDOR CARDS "testimonios-section" */
+    .testimonios-section {
+      display: flex; /* Habilita flexbox */
+      flex-direction: row; /* Distribución en fila */
+      gap: 20px; /* Espacio entre tarjetas */
+    }
+    /* FIN CONTENEDOR DE CARDS */
+  
+    /* CARD TESTIMONIOS "testimonio-card" */
+    .testimonio-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      min-height: 400px; /* Altura mínima de la tarjeta */
+      text-align: center;
+      display: flex; /* Flexbox interno para centrar contenido */
+      flex-direction: column;
+      justify-content: center; /* Centrado vertical */
+      align-items: center; /* Centrado horizontal */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      h2 { /* autor */
+        font-size: 1.5rem;
+        color: #2a272a;
+        margin-bottom: 10px;
+      }
+  
+      h3 { /* rol */
+        font-size: 1rem;
+        color: #677381;
+        margin-bottom: 15px;
+        font-style: italic;
+      }
+  
+      p { /* contenido de testimonio */
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.5;
+      }
+  
+      &:hover { /* ffecto */
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+    /* FIN CARDS TESTIMONIOS */
+  }
+  /* CIERRE SECCIÓN PRINCIPAL TESTIMONIOS */
+  

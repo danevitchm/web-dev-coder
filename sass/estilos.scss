@@ -1,5 +1,8 @@
-@import "./partials/variables";
+@use "./partials/variables";
 
-@import "./partials/header-footer";
-@import "./partials/index";
+@use "./partials/header-footer";
+@use "./partials/index";
 
+@use "./partials/servicios";
+@use "./partials/testimonios";
+@use "./partials/historia";

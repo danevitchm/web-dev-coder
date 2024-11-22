@@ -1,155 +1,69 @@
-/* Reset de CSS */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-}
-
-/* colores 
-#2a272a;
-#4b4a54;
-#677381;
-#82a0aa;
-*/
-
-html{
-    /* hace que un rem deje de valer 16px y pasa a 10
-    1rem = 10px */
-    font-size: 62.5%;
-}
-
-body{
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0f0;
-  min-height: 100vh;
-}
-
-
-main {
-  flex: 1; /* Hace que main ocupe el espacio disponible */
-}
-
-
-
-
-
-
-/* MENU NAVEGACION */
-
-nav ul {
-  list-style-type: none; /* Quita los puntos de las listas */
-  display: flex; /* Hace que los elementos de la lista estén en línea horizontal */
-  justify-content: center; /* Centra los elementos de la lista en el medio */
-  padding: 60px 20px; 
-  
-}
-
-/* elementos de la lista - espacio entre los elementos del menú */
-nav ul li {
-  margin: 0 30px; 
-}
-
-/* Estilos para los enlaces del menú */
-nav ul li a {
-  text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
-  color: #0f0f0f; 
-  font-size: 2rem; 
-  padding: 10px 15px; 
-
-}
-
-/* Efecto cambio color al pasar el ratón sobre los links */
-nav ul li a:hover {
-  background-color: #82a0aa; /* Cambia el fondo al pasar el ratón sobre los enlaces */
-  color: white; 
-  border-radius: 5px;
-  
-  
-}
-
-/* CIERRE STYLES MENU NAVEGACION */
-
-
-
-
-/* contenido de main section de index pasado a sass */
-
-
-
-
-
 /* SECCION PRINCIPAL SERVICIOS */
 
 .banner h1 {
-    font-size: 2.5rem;
-    color: rgb(25, 25, 25);
-    /* color: white; */
-    text-align: center;
-    text-shadow: 4px 2px 5px rgba(0,0,0,0.15);
-    padding-top: 20px;
-    
+  font-size: 2.5rem;
+  color: rgb(25, 25, 25);
+  /* color: white; */
+  text-align: center;
+  text-shadow: 4px 2px 5px rgba(0,0,0,0.15);
+  padding-top: 20px;
+  
 }
 
 .services{
-    display: flex; /* activa flexbox */
-    justify-content: space-around;
-    margin: 50px;
-    align-items: flex-start;
-    /* text-align: center; */
-    
+  display: flex; /* activa flexbox */
+  justify-content: space-around;
+  margin: 50px;
+  align-items: flex-start;
+  /* text-align: center; */
+  
 }
 
 .service{
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px; /* Añade un margen inferior */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Opcional: para agregar un pequeño borde */
-    border-radius: 8px; /* borde redondeado */
-    transition: transform 0.3s ease; /* animación de transformación suave */
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px; /* Añade un margen inferior */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Opcional: para agregar un pequeño borde */
+  border-radius: 8px; /* borde redondeado */
+  transition: transform 0.3s ease; /* animación de transformación suave */
 }
 
 .service:hover {
-    transform: scale(1.05); /* escala el elemento al pasar el ratón */
+  transform: scale(1.05); /* escala el elemento al pasar el ratón */
 }
 
 /* CTA compartido pag home y servicios */
 
 .cta {
-  text-align: center;
-  margin: 50px 0; /* espacio alrededor de la sección */
-  padding: 20px;
+text-align: center;
+margin: 50px 0; /* espacio alrededor de la sección */
+padding: 20px;
 }
 
 .button-cta {
-  display: inline-block; /* se comporta como un botón */
-  margin-top: 30px;
-  padding: 15px 30px; 
-  background-color: #677381; 
-  color: white;
-  font-size: 1.6rem;
-  border-radius: 50px;
-  text-decoration: none; /* subr del enlace */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* animation */
-  font-weight: bold;
-  text-align: center;
+display: inline-block; /* se comporta como un botón */
+margin-top: 30px;
+padding: 15px 30px; 
+background-color: #677381; 
+color: white;
+font-size: 1.6rem;
+border-radius: 50px;
+text-decoration: none; /* subr del enlace */
+transition: background-color 0.3s ease, transform 0.3s ease; /* animation */
+font-weight: bold;
+text-align: center;
 }
 
 /* Efectos de hover y focus */
 .button-cta:hover,
 .button-cta:focus {
-  background-color: #2a272a; /* cambia color fondo al pasar el clic */
-  transform: scale(1.05); /* animation */
+background-color: #2a272a; /* cambia color fondo al pasar el clic */
+transform: scale(1.05); /* animation */
 }
 
 
 
 
-.titulo-servicios {
-  text-align: center; 
-}
 
 
 
@@ -221,61 +135,6 @@ h2 {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* PÁGINA HISTORIA */
-
-.historia {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #677381;
-}
-
-.contenedor-historia {
-  display: flex;
-  flex-direction: row; /* La imagen y el texto estarán en una fila en pantallas grandes */
-  align-items: flex-start;
-  max-width: 1200px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.historia-foto img {
-  max-width: 300px; /* Tamaño de la imagen */
-  border-radius: 50%; /* Imagen redonda */
-  margin-right: 40px; /* Separación entre la imagen y el texto */
-}
-
-.historia-content h1 {
-  font-size: 2.8rem;
-  color: #4b4a54;
-  margin-bottom: 20px;
-}
-
-.historia-content p, .historia-content ul {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 20px;}
-
-
-
-
-
 /* FOOTER - PIE DE PAG */
 
 footer{
@@ -290,10 +149,10 @@ footer{
   display: flex;
   width: 100%; /* que ocupe el ancho de la página */
   padding: 20px;
-  
+}
 /* CIERRE STYLES FOOTER */
 
-}
+
 
 
 
@@ -301,6 +160,7 @@ footer{
 
 
   /* MEDIA QUERIES */ 
+
 
 /* nav */
 
@@ -438,5 +298,14 @@ footer{
       text-align: center;
       max-width: 80%;
       margin: 0 auto;
+  }
+}
+
+/* TESTIMONIOS */
+/* Responsive pantalla pequeña */
+@media (max-width: 768px) {
+  .testimonios-section {
+    flex-direction: column; /* Cambia a diseño vertical */
+    align-items: center; /* Centra las tarjetas */
   }
 }

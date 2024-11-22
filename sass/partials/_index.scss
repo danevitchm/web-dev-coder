@@ -55,5 +55,25 @@
         height: 350px;
         border-radius: 15px;
       }
+      .button-cta {
+        display: inline-block; /* se comporta como un botón */
+        margin-top: 30px;
+        padding: 15px 30px; 
+        background-color: #677381; 
+        color: white;
+        font-size: 1.6rem;
+        border-radius: 50px;
+        text-decoration: none; /* subr del enlace */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* animation */
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      /* Efectos de hover y focus */
+      .button-cta:hover,
+      .button-cta:focus {
+        background-color: #2a272a; /* cambia color fondo al pasar el clic */
+        transform: scale(1.05); /* animation */
+      }
   }
   /* CIERRE "main-section" */
